@@ -1,0 +1,247 @@
+.main{
+  margin-top: 10%;
+}
+
+.st0{fill:#fff}
+.st2{fill:#5d89af}
+.st3{fill:#709abf}
+.st4,.st6{
+  fill:#fff;
+  stroke:#b3dcdf;
+  stroke-miterlimit:10
+}
+.st6{
+  stroke:#5d89af;
+  stroke-width:2
+}
+.st7,.st8,.st9{
+  stroke:#709abf;
+  stroke-miterlimit:10
+}
+
+.st7{
+  stroke-width:5;
+  stroke-linecap:round;
+  fill:none
+}
+.st8,.st9{
+  fill:#fff
+}
+.st9{
+  fill:none
+}
+.st10{
+
+}
+
+#cloud1{
+  animation: cloud003 15s linear infinite;
+}
+
+#cloud2{
+  animation: cloud002 25s linear infinite;
+}
+
+#cloud3{
+  animation: cloud003 20s linear infinite;
+}
+
+#cloud4{
+  animation: float 4s linear infinite;
+}
+
+#cloud5{
+  animation: float 8s linear infinite;
+}
+
+#cloud7{
+  animation: float 5s linear infinite;
+}
+
+#tracks{
+  animation: slide 650ms linear infinite;
+}
+
+#bumps{
+  animation: land 10000ms linear infinite;
+}
+
+@keyframes jig {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(1px); }
+    100% { transform: translateY(0px); }
+}
+
+#car-layers{
+  animation: jig 0.35s linear infinite;
+}
+
+@keyframes land {
+    from { transform: translateX(0); }
+    to { transform: translateX(1000px); }
+}
+
+
+@keyframes slide {
+    from { transform: translateX(0px); }
+    to { transform: translateX(100px); }
+}
+
+/* @keyframes cloudFloat {
+  0% { transform: translateX(0) translateY(3px); }
+  100% { transform: translateX(1000px) translateY(0); }
+} */
+
+@keyframes cloud001 {
+  0% { transform: translateX(-1000px) translateY(3px); }
+  100% { transform: translateX(1000px) translateY(0); }
+}
+
+@keyframes cloud002 {
+  0% { transform: translateX(-1000px) translateY(3px); }
+  100% { transform: translateX(1000px) translateY(0); }
+}
+
+@keyframes cloud003 {
+  0% { transform: translateX(-1000px) translateY(3px); }
+  100% { transform: translateX(1000px) translateY(0); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px) translateX(0); }
+    50% { transform: translateY(8px) translateX(5px); }
+    100% { transform: translateY(0px) translateX(0); }
+}
+
+#bracefront, #braceback{
+  animation: braces 1s linear infinite;
+}
+
+@keyframes braces {
+    0% { transform: translateX(-2px); }
+  25% { transform: translateX(3px); }
+    50% { transform: translateX(-2px); }
+    75% { transform: translateX(3px); }
+  100% { transform: translateX(-2px); }
+}
+.chk-btn{
+  display: flex;
+ justify-content: center;
+ align-items: center;
+ border: none;
+}
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    /* position: relative; */
+    z-index: 0;
+    border-radius: 10px;
+    position: relative;
+  margin-top: 25%;
+  /* margin-bottom: 10%; */
+align:center;
+
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+@media (min-width: 981px) and (max-width : 1280px) {
+    #postcard{
+        left: 450px;
+    }
+
+    .move {
+        animation-name: animTabletHor;
+    }
+}
+
+@media (min-width: 768px) and (max-width : 980px) {
+    #postcard{
+        transform: scale(1.2) rotate(28deg);
+        left: 250px;
+    }
+
+    .move {
+        animation-name: animTablet;
+    }
+}
+
+@media (max-width: 767px) {
+    #postcard{
+        left: auto;
+        top: 0px;
+    }
+    .move {
+        animation-name: animPhone;
+    }
+}
+
+@media screen and (max-width: 650px) {
+  .column{
+    width: 100%;
+    display: block;
+  }
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
