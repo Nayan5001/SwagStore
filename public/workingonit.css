@@ -1,0 +1,290 @@
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.iframely-embed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background: white;
+}
+
+#app {
+  // opacity: 0 !important;
+  // visibility: hidden;
+  z-index: 100;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  padding-bottom: 4vmin;
+  height: 90vh;
+  width: 100%;
+  background: #ede8e2;
+  color: #3a3535;
+}
+
+body {
+  display: grid;
+  padding: 3vmin;
+  background: #e6ded7;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+
+.title {
+  padding-left: 1em;
+  grid-column: 1 / -1;
+  grid-row: 1;
+
+  font-family: "Prata", serif;
+  font-size: 5vw;
+  width: 100%;
+  z-index: 2;
+
+  // start
+
+  > .title-inner {
+    display: inline-block;
+  }
+}
+
+@keyframes text-clip {
+  from {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes outer-left {
+  from {
+    transform: translateX(50%);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes inner-left {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.cafe,
+.mozart {
+  animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+  // outline: 1px solid red;
+}
+
+// [class*='inner'] {
+//   outline: 1px solid blue;
+// }
+
+.title-inner {
+  display: inline-block;
+  animation: inner-left 1s 1s ease both;
+}
+
+.cafe-inner {
+  display: inline-block;
+  animation: inner-left 1s 1s ease both,
+    text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.mozart-inner {
+  animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.title {
+  animation: outer-left 1s 1s ease both;
+}
+
+.cafe {
+  // start
+  > .cafe-inner {
+    display: inline-block;
+  }
+}
+
+.mozart {
+  display: inline-block;
+}
+
+.image {
+  grid-row: 1;
+  grid-column: 2;
+  margin-left: -2rem;
+  opacity: 0.7;
+
+  animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
+
+  @keyframes image-in {
+    from {
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+// Replay animation!
+body:active * {
+  animation: none !important;
+}
+.chk-btn{
+  /* margin-top: -1%; */
+  display: flex;
+ justify-content: center;
+ align-items: center;
+ border: none;
+}
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    /* position: relative; */
+    z-index: 0;
+    border-radius: 10px;
+    position: relative;
+  /* margin-top: 5%; */
+  margin-bottom: 10%;
+align:center;
+
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+@media (min-width: 981px) and (max-width : 1280px) {
+    #postcard{
+        left: 450px;
+    }
+
+    .move {
+        animation-name: animTabletHor;
+    }
+}
+
+@media (min-width: 768px) and (max-width : 980px) {
+    #postcard{
+        transform: scale(1.2) rotate(28deg);
+        left: 250px;
+    }
+
+    .move {
+        animation-name: animTablet;
+    }
+}
+
+@media (max-width: 767px) {
+    #postcard{
+        left: auto;
+        top: 0px;
+    }
+    .move {
+        animation-name: animPhone;
+    }
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+.chk-btn{
+  /* text-align:center; */
+  padding: 20px;
+display:flex;
+justify-content:center;
+  /* margin: auto; */
+  position: absolute;
+
+bottom: -7%;
+}
+ .glow-on-hover{
+display: inline-block;
+}
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
