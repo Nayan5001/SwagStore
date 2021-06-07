@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>AllProducts-SwagStore</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+  <div class="header">
+
+    <div class="container">
+      <div class="navbar">
+
+        <div class="logo">
+          <a href="/"><img src="images/logo1.jpg" alt="" width=125px></a>
+        </div>
+        <div class="logo">
+          <a href="/"> <img src="images/logo.gif" alt="Logo" width=175px></a>
+        </div>
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="/">Home</a></li>
+            <li><a href="products">Products</a></li>
+            <li><a href="About">About</a></li>
+            <li><a href="Contact">Contact</a></li>
+            <li><a href="account">Account</a></li>
+
+          </ul>
+          <a href="cart-details"><img src="images/cart.png" width="30px" height="30px"></a>
+          <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </nav>
+
+
+      </div>
+
+    </div>
+  </div>
+
+<!-- account-page -->
+<div class="account-page">
+  <div class="container">
+    <div class="row">
+<div class="col-2">
+  <img src="images/image1.png" width="100%">
+
+</div>
+<div class="col-2">
+  <div class="form-container">
+    <div class="form-btn">
+<span onclick="login()">Login</span>
+<span onclick="register()">Register</span>
+<hr id="Indicator">
+    </div>
+ <form id="LoginForm" action="/login" method="post">
+<input type="email" placeholder="Email" name="username" autocomplete="off" required>
+<input type="password" placeholder="Password" name="password" required>
+<button class="animated-button1 login" type="submit">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  Login
+</button>
+<a href="#">Forgot Password</a>
+ </form>
+ <form id="RegForm" action="/register" method="post">
+<input type="email" placeholder="Email" name="username" autocomplete="off" required>
+<input type="password" placeholder="Password" name="password" required>
+<button class="animated-button1 login" type="submit">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  Register
+</button>
+<a href="#">Forgot Password</a>
+ </form>
+  </div>
+
+</div>
+    </div>
+
+  </div>
+
+</div>
+
+<%- include("partials/footer") -%>
+
+<%- include("toggle-menu") -%>
+
+<!-- js for toggle form -->
+<script>
+  var LoginForm=document.getElementById("LoginForm");
+    var RegForm=document.getElementById("RegForm");
+  var Indicator=document.getElementById("Indicator");
+  function register(){
+    RegForm.style.transform="translateX(0px)";
+    LoginForm.style.transform="translateX(0px)";
+    Indicator.style.transform="translateX(180px)";
+  }
+  function login(){
+    RegForm.style.transform="translateX(300px)";
+    LoginForm.style.transform="translateX(300px)";
+    Indicator.style.transform="translateX(46px)";
+  }
+</script>
+</body>
+
+</html>
