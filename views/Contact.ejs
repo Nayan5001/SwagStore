@@ -1,0 +1,58 @@
+
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Contact</title>
+        <link rel="stylesheet" href="contact-style.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Questrial|Droid+Sans|Alice' rel='stylesheet' type='text/css'>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    </head>
+    <body>
+
+
+        <div class="container">
+            <div class="row">
+                <div></div>
+                <img id="postcard" src="https://images.unsplash.com/photo-1558064340-601a5c6ac442?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dmVydGljYWx8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80" width="30%" height=auto alt="postcard" class="img-responsive move">
+
+                <div id="content" >
+                    <h1> Contact me </h1>
+
+                    <form role="form" action="mailto:arora.nayan999@gmail.com" method:"post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="username" class="iconic user" > Name <span class="required">*</span></label>
+                            <input type="text" class="form-control" name="username" id="username"  required="required" placeholder="Hi friend, how may I call you ?">
+                        </div>
+                        <div class="form-group">
+                            <label for="usermail" class="iconic mail-alt"> E-mail address <span class="required">*</span></label>
+                            <input type="email" class="form-control" name="usermail" id="usermail" placeholder="I promise I hate spam as much as you do" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="iconic quote-alt"> Subject </label>
+                            <input type="text" class="form-control" name="subject" id="subject"  required="required" placeholder="What would you like to talk about?">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="iconic comment"> Message </label>
+                            <textarea name="message" id="message"  class="form-control" rows="3" placeholder="Don't be shy, live me a friendly message and I'll answer as soon as possible"  required="required"></textarea>
+                        </div>
+                        <input type="submit" value=" ★  Send the mail !" />
+<button onclick="window.location.href='/'" class="glow-on-hover" type="button" align="center">Go back to home!</button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </body>
+</html>
