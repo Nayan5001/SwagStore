@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Cart-SwagStore</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+  <div class="header">
+
+    <div class="container">
+      <div class="navbar">
+
+        <div class="logo">
+          <a href="/"><img src="images/logo1.jpg" alt="" width=125px></a>
+        </div>
+        <div class="logo">
+          <a href="/"> <img src="images/logo.gif" alt="Logo" width=175px></a>
+        </div>
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="/">Home</a></li>
+            <li><a href="products">Products</a></li>
+            <li><a href="About">About</a></li>
+            <li><a href="Contact">Contact</a></li>
+            <li><a href="account">Account</a></li>
+
+          </ul>
+          <a href="cart-details"><img src="images/cart.png" width="30px" height="30px"></a>
+          <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </nav>
+
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- cart items details -->
+  <div class="small-container cart-page">
+    <table>
+      <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+      </tr>
+
+      <% listItems.forEach(function(element){ %>
+      <!-- <form id="<%=element._id%>" action="/remove" method="post"> -->
+      <script>
+        // console.log("<%=element.id%>");
+        function myFunction() {
+          console.log("Ritik");
+          document.getElementById("<%=element._id%>").submit();
+        }
+      </script>
+
+      <tr>
+        <td>
+          <div class="cart-info">
+            <img src=<%=element.source%>>
+            <div>
+              <p><%=element.name%></p>
+              <small>Price: Rs. <%=element.price%></small>
+              <br>
+              <form id="<%=element._id%>" action="/remove" method="post">
+                <input type="hidden" name="itemId" value="<%=element._id%>" required=""></input>
+                <script>
+                  console.log("11  <%=element.id%> 22 ");
+                </script>
+                <button type="submit" onClick="myFunction()" value="<%=element.id%>"  name="button">Remove</button>
+              </form>
+            </div>
+          </div>
+
+        </td>
+
+        <td>
+          <input type="number" value="<%=element.quantity%>" disabled="true" min="1">
+        </td>
+        <td id="sub<%=element._id%>"><span>Rspp. </span>
+          <script>
+            num1 = "<%=element.price%>";
+            num2 = "<%=element.quantity%>";
+            document.getElementById(
+              "sub<%=element._id%>").innerHTML = "Rs. " + (num1 * num2);
+          </script>
+        </td>
+      </tr>
+      <!-- </form> -->
+      <% }); %>
+
+      <!-- <tr>
+        <td>
+          <div class="cart-info">
+            <img src="images/buy-2.jpg">
+            <div>
+              <p>Red Printed Tshirt</p>
+              <small>Price: $75.00</small>
+              <br>
+              <a href="#">Remove</a>
+            </div>
+          </div>
+        </td>
+        <td><input type="number" value="1" min="0"></td>
+        <td>$75.00</td>
+      </tr> -->
+      <!-- <tr>
+        <td>
+          <div class="cart-info">
+            <img src="images/buy-3.jpg">
+            <div>
+              <p>Red Printed Tshirt</p>
+              <small>Price: $80.00</small>
+              <br>
+              <a href="#">Remove</a>
+            </div>
+          </div>
+        </td>
+        <td><input type="number" value="1" min="0"></td>
+        <td>$80.00</td>
+      </tr> -->
+    </table>
+
+    <div class="total-price">
+
+      <table>
+        <tr>
+          <td>Subtotal</td>
+          <td>Rs. <%=Subtotal%></td>
+        </tr>
+        <tr>
+          <td>Tax</td>
+          <td>Rs. <%=tax%></td>
+        </tr>
+        <tr>
+          <td>Total</td>
+          <td>Rs. <%=total%></td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+  <div class=chk-btn>
+    <form action="/checkout" method="post">
+      <button type="submit" class="glow-on-hover" name="button">Proceed For Checkout</button>
+    </form>
+
+  </div>
+  <%- include("partials/footer") -%>
+
+  <%- include("toggle-menu") -%>
+
+
+</body>
+
+</html>
