@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>AllProducts-SwagStore</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+  <div class="header">
+
+    <div class="container">
+      <div class="navbar">
+
+        <div class="logo">
+          <a href="/"><img src="images/logo1.jpg" alt="" width=125px></a>
+        </div>
+        <div class="logo">
+          <a href="/"> <img src="images/logo.gif" alt="Logo" width=175px></a>
+        </div>
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="/">Home</a></li>
+            <li><a href="products">Products</a></li>
+            <li><a href="About">About</a></li>
+            <li><a href="Contact">Contact</a></li>
+            <li><a href="account">Account</a></li>
+
+          </ul>
+        <a href="cart-details"><img src="images/cart.png" width="30px" height="30px"></a>
+          <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </nav>
+
+
+      </div>
+
+    </div>
+  </div>
+  <!-- featured products -->
+  <div class="small-container">
+    <div class="row row-2">
+      <h2>All Products</h2>
+<select>
+  <option>Default Sorting</option>
+<option>Sort By Price</option>
+<option>Sort By Popularity</option>
+<option>Sort By Rating</option>
+<option>Sort By Sale</option>
+</select>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <a href="product-details-1"><img src="images/product-1.jpg"></a>
+
+          <a href="product-details-1"><h4>Red Printed T-Shirt</h4></a>
+                  <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                  </div>
+                  <p>Rs. 899</p>
+
+
+
+      </div>
+      <div class="col-4">
+        <a href="product-details-2">  <img src="images/product-20.jpg"></a>
+
+
+          <a href="product-details-2"><h4>Puma
+Men Black Mesh Running Enzo 2 Shoes</h4></a>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>Rs. 2499</p>
+
+
+
+      </div>
+      <div class="col-4">
+        <a href="product-details-3"><img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2019/1/4/defba343-26f7-4cf4-ad96-41c1440fcadf1546588177553-1.jpg"></a>
+    <a href="product-details-3">  <h4>Men Grey Slim Fit Checked Regular Trousers</h4></a>
+
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p>Rs. 999</p>
+
+      </div>
+      <div class="col-4">
+        <a href="product-details-4">  <img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/10574868/2019/12/10/263f9f8e-8228-493e-b704-4fb1b3df59101575952183111-Roadster-Men-Tshirts-7291575952181139-1.jpg"></a>
+  <a href="product-details-4"><h4>Men Navy Blue Solid Embroidered Polo T-shirt</h4></a>
+
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>
+        </div>
+        <p>Rs. 1399</p>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <a href="product-details-5"><img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/12067984/2021/2/2/0425f19a-852a-45e6-a1f6-7c80526a158f1612240158034-HIGHLANDER-Men-White-Sneakers-2351612240156845-6.jpg"></a>
+<a href="product-details-5"><h4>Men White Sneakers</h4></a>
+
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>
+        </div>
+        <p>Rs. 895</p>
+
+      </div>
+      <div class="col-4">
+        <a href="product-details-6"><img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/9293209/2019/4/13/da938f80-6464-45cf-9e5b-bcc885eb97e41555148565429-Puma-Men-Black-Round-Neck-T-shirt-5761555148564503-1.jpg"></a>
+<a href="product-details-6">  <h4>Men Black Solid Round Neck Energy SS Tee T-shirt</h4></a>
+
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p>Rs. 799</p>
+
+      </div>
+      <div class="col-4">
+        <a href="product-details-7"><img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/976817/2018/10/4/4db844a2-89c9-46a4-9ccf-c2b8db3306fb1538652963787-HRX-by-Hrithik-Roshan-Active-Men-Set-of-3-Ankle-Length-Socks-1.jpg"></a>
+<a href="product-details-7"><h4>Men Ankle length Pack of 3 Terry Socks</h4></a>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p>Rs. 384</p>
+
+      </div>
+      <div class="col-4">
+        <a href="product-details-8">  <img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/8804501/2019/4/1/67f783f4-7399-4cf5-850a-00a5c7863d4b1554125361035-SCUDERIA-FERRARI-Men-Red-Analogue-Watch-830588-3961554125359-1.jpg"></a>
+<a href="product-details-8"><h4>Redrev T Men Red Analogue Watch 830588</h4></a>
+
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>
+        </div>
+        <p>Rs. 16950</p>
+
+      </div>
+      <div class="col-4">
+        <a href="product-details-9"><img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11860212/2020/5/27/2e7c5421-33b8-473a-9f2b-eccfc09e7be81590579802812MVMTMenGreenAnalogueWatch1.jpg"></a>
+<a href="product-details-9"><h4>Men Olive Green Analogue Watch D-BT01-OLGU</h4></a>
+
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>
+        </div>
+        <p>Rs. 9912</p>
+
+      </div>
+      <div class="col-4">
+        <a href="product-details-10"><img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11981342/2021/3/23/797dbb3c-410f-4509-8fda-87bca3242fcc1616502480540-HRX-by-Hrithik-Roshan-Men-Navy-Mesh-Running-Shoes-6371616502-1.jpg"></a>
+<a href="product-details-10"><h4>Men Navy Mesh Running Shoes</h4></a>
+
+
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>
+        </div>
+        <p>Rs. 2419</p>
+
+      </div>
+      <div class="col-4">
+        <a href="product-details-11"><img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13639120/2021/4/12/cc99e032-5725-49e0-9d37-2b9f75b4ad1f1618217710784-US-Polo-Assn-Men-Casual-Shoes-4951618217710255-1.jpg"></a>
+
+        <a href="product-details-11"><h4>Men Grey Solid Driving Shoes</h4></a>
+
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>
+        </div>
+        <p>Rs. 2209</p>
+
+      </div>
+      <div class="col-4">
+        <a href="product-details-12">  <img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1088888/2016/5/11/11462961543084-Hubberholme-Navy-Tailored-Fit-Track-Pants-921462961542776-1.jpg"></a>
+<a href="product-details-12"><h4>Navy Track Pants</h4></a>
+
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>
+        </div>
+        <p>Rs. 750</p>
+
+      </div>
+    </div>
+   <div class="page-btn">
+     <span>1</span>
+<span>2</span>
+<span>3</span>
+<span>4</span>
+<span>&#8594;</span>
+   </div>
+
+    </div>
+
+    <%- include("partials/footer") -%>
+
+    <%- include("toggle-menu") -%>
+</body>
+
+</html>
