@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>AllProducts-SwagStore</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+  <div class="header">
+
+    <div class="container">
+      <div class="navbar">
+
+        <div class="logo">
+          <a href="/"><img src="images/logo1.jpg" alt="" width=125px></a>
+        </div>
+        <div class="logo">
+          <a href="/"> <img src="images/logo.gif" alt="Logo" width=175px></a>
+        </div>
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="/">Home</a></li>
+            <li><a href="products">Products</a></li>
+            <li><a href="About">About</a></li>
+            <li><a href="Contact">Contact</a></li>
+            <li><a href="account">Account</a></li>
+
+          </ul>
+          <a href="cart-details"><img src="images/cart.png" width="30px" height="30px"></a>
+          <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </nav>
+
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- single product details -->
+
+  <div class="small-container single-product">
+    <div class="row">
+      <div class="col-2">
+        <img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11981342/2021/3/23/797dbb3c-410f-4509-8fda-87bca3242fcc1616502480540-HRX-by-Hrithik-Roshan-Men-Navy-Mesh-Running-Shoes-6371616502-1.jpg" width="100%" id="ProductImg">
+         <div class="small-img-row">
+           <div class="small-img-col">
+             <img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11981342/2021/3/23/797dbb3c-410f-4509-8fda-87bca3242fcc1616502480540-HRX-by-Hrithik-Roshan-Men-Navy-Mesh-Running-Shoes-6371616502-1.jpg" width="100%" class="small-img">
+           </div>
+           <div class="small-img-col">
+             <img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11981342/2021/3/23/4d9dbe01-4332-4b3d-9243-a965bc79f6281616502480487-HRX-by-Hrithik-Roshan-Men-Navy-Mesh-Running-Shoes-6371616502-4.jpg" width="100%"  class="small-img">
+           </div>
+           <div class="small-img-col">
+             <img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11981342/2021/3/23/e21d318f-139d-4f3e-b967-fb3170bb1fd21616502480470-HRX-by-Hrithik-Roshan-Men-Navy-Mesh-Running-Shoes-6371616502-5.jpg" width="100%"  class="small-img">
+           </div>
+           <div class="small-img-col">
+             <img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11981342/2021/3/23/83af0372-80bb-4c48-ba7e-f8ebd43eeb8d1616502480432-HRX-by-Hrithik-Roshan-Men-Navy-Mesh-Running-Shoes-6371616502-7.jpg" width="100%"  class="small-img">
+           </div>
+         </div>
+      </div>
+      <div class="col-2">
+        <form  id="gfg" action="/add10" method="post">
+        <p>Home / Sports Shoes</p>
+        <h1>Men Navy Mesh Running Shoes</h1>
+        <h4>Rs. 2419</h4>
+        <select required>
+          <option selected disabled value="">Select Size</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+          <option>11</option>
+        </select>
+        <input type="number" name="quantity" value="1" min="1">
+        <div class="wrapper">
+          <button type="submit" class="cta">
+            <span>Add To Cart</span>
+            <span>
+              <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <path class="one"
+                    d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z"
+                    fill="#FFFFFF"></path>
+                  <path class="two"
+                    d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z"
+                    fill="#FFFFFF"></path>
+                  <path class="three"
+                    d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z"
+                    fill="#FFFFFF"></path>
+                </g>
+              </svg>
+            </span>
+          </button>
+        </form>
+        <script>
+                    function myFunction() {
+                        document.getElementById("gfg").submit();
+                    }
+                </script>
+        </div>
+        <h3>Product Details <i class="fa fa-indent"></i></h3>
+        <br>
+        <p>A pair of navy blue running sports shoes, has regular styling, lace-up detail
+Mesh upper
+<br>
+Cushioned footbed
+<br>
+Textured and patterned outsole
+<br>
+Warranty: 3 months
+<br>
+Warranty provided by brand/manufacturer
+<br>
+<br>
+<b>Material & Care</b>
+<br>
+Mesh
+<br>
+Wipe with a clean, dry cloth to remove dust</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- title -->
+  <div class="small-container">
+    <div class="row row-2">
+      <h2>Related Products</h2>
+      <a href="products"><p>View More</p></a>
+    </div>
+
+  </div>
+
+  <!-- featured products -->
+  <div class="small-container">
+
+
+    <div class="row">
+      <div class="col-4">
+        <a href="product-details-2">  <img src="images/product-20.jpg"></a>
+
+
+          <a href="product-details-2"><h4>Puma
+Men Black Mesh Running Enzo 2 Shoes</h4></a>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>Rs. 2499</p>
+
+
+
+      </div>
+      <div class="col-4">
+        <a href="product-details-11"><img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13639120/2021/4/12/cc99e032-5725-49e0-9d37-2b9f75b4ad1f1618217710784-US-Polo-Assn-Men-Casual-Shoes-4951618217710255-1.jpg"></a>
+
+        <a href="product-details-11"><h4>Men Grey Solid Driving Shoes</h4></a>
+
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>
+        </div>
+        <p>Rs. 2209</p>
+
+      </div>
+      <div class="col-4">
+        <a href="product-details-5"><img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/12067984/2021/2/2/0425f19a-852a-45e6-a1f6-7c80526a158f1612240158034-HIGHLANDER-Men-White-Sneakers-2351612240156845-6.jpg"></a>
+<a href="product-details-5"><h4>Men White Sneakers</h4></a>
+
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>
+        </div>
+        <p>Rs. 895</p>
+
+      </div>
+      <div class="col-4">
+        <a href="product-details-7"><img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/976817/2018/10/4/4db844a2-89c9-46a4-9ccf-c2b8db3306fb1538652963787-HRX-by-Hrithik-Roshan-Active-Men-Set-of-3-Ankle-Length-Socks-1.jpg"></a>
+<a href="product-details-7"><h4>Men Ankle length Pack of 3 Terry Socks</h4></a>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p>Rs. 384</p>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+
+  <%- include("partials/footer") -%>
+
+  <%- include("toggle-menu") -%>
+
+  <script>
+var ProductImg=document.getElementById("ProductImg");
+var SmallImg=document.getElementsByClassName("small-img");
+
+SmallImg[0].onclick=function(){
+  ProductImg.src=SmallImg[0].src;
+}
+SmallImg[1].onclick=function(){
+  ProductImg.src=SmallImg[1].src;
+}
+SmallImg[2].onclick=function(){
+  ProductImg.src=SmallImg[2].src;
+}
+SmallImg[3].onclick=function(){
+  ProductImg.src=SmallImg[3].src;
+}
+
+  </script>
+</body>
+
+</html>
